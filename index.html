@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Full Stack Developer</title>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader Animation -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <span class="logo-icon"><i href="#home" class="fas fa-user"></i></span>
+                    <span class="logo-text"></span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Nisanth Kalden</span></h1>
+            <p class="hero-subtitle">
+                I'm a <span class="typing-text"></span>
+            </p>
+            <p class="hero-description">
+                Crafting beautiful, responsive web experiences and scalable applications. 
+                Let's build something amazing together.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/ChatGPT Image Apr 8, 2026, 01_06_27 PM.png" alt="Profile Photo">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate Full Stack Developer with a keen eye for creating elegant solutions to complex problems. 
+                        With expertise in modern web technologies, I build responsive, user-centric applications that make a difference.
+                    </p>
+                    
+                    <p class="about-description">
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
+                        or sharing knowledge with the developer community.
+                    </p>
+                    
+                    <!-- <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h4>50+</h4>
+                            <p>Projects Completed</p>
+                        </div> <div class="highlight-item">
+                            <h4>30+</h4>
+                            <p>Happy Clients</p>
+                        </div> <div class="highlight-item">
+                            <h4>3+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div> -->
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <h4 class="counter" data-target="5" data-symbol="+">0</h4>
+                            <p>Academic & Personal Projects</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4 class="counter" data-target="10" data-symbol="+">0</h4>
+                            <p>Concepts Mastered</p>
+                        </div>
+                        <div class="highlight-item">
+                            <h4 class="counter1" data-target="100" data-symbol="%">100%</h4>
+                            <p>Learning Commitments</p>
+                        </div>
+                    </div>
+                    <div class="about-buttons" style="text-align: center;">
+                    <a href="images/Nisanth Recent.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                    </div>
+
+    
+                    <!-- <div class="about-links">   
+                        <a href="#" class="social-link" title="LinkedIn" onclick="openLinkedIn()">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub" onclick="openGitHub()">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <a href="#" class="social-link" title="Email" onclick="openEmail()">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link" title="whatsapp" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div> -->
+            </div>
+                          
+                
+            </div>
+            <div class="about-links" >
+                <a href="#" class="social-link" title="LinkedIn" onclick="openLinkedIn()">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub" onclick="openGitHub()">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        <a href="#" class="social-link" title="Email" onclick="openEmail()">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link" title="whatsapp" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+                
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <!-- Frontend Skills -->
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <i class="fas fa-code"></i>
+                    Frontend Development
+                </h3>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React.js</span>
+                            <span class="skill-percent">83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 83%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percent">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend Skills -->
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <i class="fas fa-server"></i>
+                    Backend Development
+                </h3>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SpringBoot</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-percent">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 87%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">FireBase</span>
+                            <span class="skill-percent">83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 83%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div class="skills-category">
+                <h3 class="category-title">
+                    <i class="fas fa-tools"></i>
+                    Tools & Others
+                </h3>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">VS Code</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Claude</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CodeX</span>
+                            <span class="skill-percent">72%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 72%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION SECTION ==================== -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education & Courses</h2>
+            
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bachelor of Technology</h3>
+                        <p class="timeline-subtitle">Artificial Intelligence And Data Science</p>
+                        <p class="timeline-institution">Jeppiaar Institute Of Technology, Chennai</p>
+                        <p class="timeline-date">2021 - 2025</p>
+                        <p class="timeline-description">
+                            Graduated with distinction. Focused on web development, data structures, and software engineering practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Full Stack Web Development</h3>
+                        <p class="timeline-subtitle">Advanced Course</p>
+                        <p class="timeline-institution">Greens Technology,Chennai</p>
+                        <p class="timeline-date">08/2025 - 04/2026</p>
+                        <p class="timeline-description">
+                            Completed intensive course covering Java full stack, project management, and real-world development practices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Computer Science</h3>
+                        <p class="timeline-subtitle">Higher Secondary Education</p>
+                        <p class="timeline-institution">Holy Angels Matriculation.HR.SEC School,Kanyakumari</p>
+                        <p class="timeline-date">2021</p>
+                        <p class="timeline-description">
+                            Completed my higher secondary education with a focus on computer knowledge,science and mathematics.
+                        </p>
+                    </div>
+                </div>
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Joy Of Computing With Python</h3>
+                        <p class="timeline-subtitle">Online Course</p>
+                        <p class="timeline-institution">Nptel</p>
+                        <p class="timeline-date">2022</p>
+                        <p class="timeline-description">
+                            Completed NPTEL's "The Joy of Computing using Python", focusing on problem-solving,algorithmic thinking,and
+                            practical implementation through coding exercises and assignments.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">Application</button>
+                <button class="filter-btn" data-filter="AI Model">AI Model</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="images/Screenshot 2026-06-24 131702.png" alt="Project">
+                        <div class="project-overlay">
+                            <a href="https://bma-cakes.vercel.app/" class="project-link" title="Live Demo" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/nisanthkalden-dev/BMA-Cakes" class="project-link" title="GitHub" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">WebPage for Backing Company</h3>
+                        <p class="project-description">
+                            Full-featured webPage with product catalog, cart management, and Ordering Features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">FireBase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="images/Screenshot 2026-06-24 225445.png" alt="Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">
+                            A responsive personal portfolio website showcasing projects, skills, and contact information.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="AI Model">
+                    <div class="project-image">
+                        <img src="images/image-13.webp" alt="Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="LinkedIn" onclick="openLinkedIn()">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="project-link" title="GitHub" onclick="openGitHub()">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Video Summarization Using Python</h3>
+                        <p class="project-description">
+                            AI-powered video summarization tool using Python and deep learning techniques.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Whisper</span>
+                            <span class="tech-tag">NLTk</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <!-- <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250?text=Weather+Dashboard" alt="Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">
+                            Interactive weather application with real-time data, forecasts, and location services.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">CSS Grid</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 5 -->
+                <!-- <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250?text=Chat+Application" alt="Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Real-Time Chat Application</h3>
+                        <p class="project-description">
+                            WebSocket-powered chat app with user authentication, messaging, and file sharing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 6 -->
+                <!-- <div class="project-card" data-category="AI Model">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250?text=UI+Kit" alt="Project">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" title="Live Demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Modern UI Kit</h3>
+                        <p class="project-description">
+                            Comprehensive UI kit with pre-built components, animations, and responsive layouts.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            
+            <div class="experience-timeline">
+                <!-- Experience Item 1 -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Junior Support Engineer</h3>
+                        <p class="experience-company">Pegatron-Tata Electronics</p>
+                        <p class="experience-period">Feb 2025 - Jun 2025</p>
+                        <p class="experience-description">
+                            Worked in a high-volume electronics manufacturing environment,supporting production,
+                            quality control,and process optimization for consumer electronic devices.Operated within 
+                            strict deadlines,maintaining efficiency,accuracy,and adherence to industry standards in 
+                            a fast-paced assembly line setup.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Managed assembly line tasks with focus on speed + precision</li>
+                            <li>Worked closely with supervisors and team members</li>
+                            <li>Maintained product standards under high production pressure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Machine Learning</h3>
+                        <p class="experience-company">Retech Solutions pvt.Ltd</p>
+                        <p class="experience-period">One Month Internship - Jun 2023</p>
+                        <p class="experience-description">
+                            Gained hands-on experience in machine learning algorithms and their applications. Worked on various projects involving data analysis, model training, and deployment.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Learned core Python concepts including variables, loops, functions, and file handling</li>
+                            <li>Understood fundamental machine learning concepts such as supervised vs. unsupervised learning</li>
+                            <li>Implemented simple machine learning models for learning purposes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <!-- <div class="experience-item">
+                    <div class="experience-marker"></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Junior Web Developer</h3>
+                        <p class="experience-company">StartUp Innovations</p>
+                        <p class="experience-period">Mar 2021 - Jun 2021</p>
+                        <p class="experience-description">
+                            Created responsive web pages and interactive user interfaces. Worked with HTML, CSS, 
+                            and JavaScript to implement design mockups.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Built 15+ responsive web pages</li>
+                            <li>Contributed to open-source projects</li>
+                            <li>Learned and implemented modern development practices</li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's talk about everything!</h3>
+                    <p>I'm always open to discussing new projects, interesting ideas, or opportunities to be part of your vision.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p><a href="https://maps.google.com/?q=Chennai,+India" target="_blank">Chennai, India</a></p>
+                                <p><a href="https://maps.google.com/?q=8.222395855644566, 77.18557" target="_blank">Native : Kanyakumari,TamilNadu</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:nisanthkalden2003@gmail.com">nisanthkalden2003@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="https://wa.me/917598695001" target="_blank">+91 7598695001</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-socials">
+                        <a href="#" class="social-icon" title="LinkedIn" onclick="openLinkedIn()">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="GitHub" onclick="openGitHub()">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="whatsapp" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram" onclick="openinstagram()">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" onclick="sendToWhatsApp()">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- <p>&copy; 2024 Your Name. All rights reserved.</p> -->
+                 <h3>Thank you <i class="fas fa-smile"></i></h3>
+                <p>Designed & Built with using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
