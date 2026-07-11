@@ -22,12 +22,13 @@
    --primary-color: #14b8a6;
    --secondary-color: #f59e0b;
    --tertiary-color: #fb7185;
-   --bg-dark: #102a43;
-  --bg-darker: #071a2f;
-   --bg-light: #1e3a4c;
+   --bg-dark: #0a0a0a;
+  --bg-darker: #000000;
+   --bg-light: #171717;
   --text-light: #f8fafc;
-   --text-muted: #b6c7d6;
-  --border-color: #2f5368;
+   --text-muted: #ded7d7ec;
+  --border-color: #262626;
+  --card-bg: #111111;
   --success-color: #22c55e;
    --warning-color: #facc15;
     
@@ -444,14 +445,14 @@ body {
     margin: 0 auto;
 }
 
-.image-wrapper img {
+.image-wrapper video {
     width: 100%;
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
     transition: var(--transition-normal);
 }
 
-.image-wrapper:hover img {
+.image-wrapper:hover video {
     transform: scale(1.05) rotateY(5deg);
 }
 
