@@ -568,7 +568,7 @@ document.querySelectorAll('img').forEach(img => {
 console.log('Portfolio Website Initialized Successfully! 🚀');
 
 function openLinkedIn() {
-  window.open("https://www.linkedin.com/in/nisanth-kalden-m-65346b2a1", "_blank");
+  window.open("https://www.linkedin.com/in/nisanth-kalden-m", "_blank");
 }
 
 function openGitHub() {
