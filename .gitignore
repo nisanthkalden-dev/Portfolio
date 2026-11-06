@@ -1,0 +1,34 @@
+# Backup files & temporary files
+*.bak
+*.tmp
+*.temp
+*~
+
+# OS metadata & system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor & IDE configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Environment variables & secrets (if added later)
+.env
+.env.local
+.env.*.local
+
+# Dependency & log folders (for future tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
