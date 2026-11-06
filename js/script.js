@@ -504,7 +504,7 @@ class AmbientParallax {
 
 // ==================== 11. SOCIAL LINK DISPATCHERS ====================
 function openLinkedIn() {
-    window.open("https://www.linkedin.com/in/nisanth-kalden-m-65346b2a1", "_blank", "noopener,noreferrer");
+    window.open("https://www.linkedin.com/in/nisanth-kalden-m", "_blank", "noopener,noreferrer");
 }
 
 function openGitHub() {
