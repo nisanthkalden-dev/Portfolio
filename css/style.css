@@ -1,57 +1,67 @@
 /* ==========================================================================
    PORTFOLIO WEBSITE - DEVELOPER STYLESHEET
-   Harmonious 4-Color Palette:
-     1. #84A282 - Deep Laurel Green (Primary Brand & Structure)
-     2. #B8CFB3 - Sage Green (Interactive Highlights & Accents)
-     3. #F6E2E9 - Soft Rose (Pill Badges, Secondary CTAs, Glows & Accents)
-     4. #FEFAF3 - Cream / Alabaster (Headings, Clear Typography & Bright Focus)
-   Balanced Across All Interactive Components & Sections
+   Harmonious 60-30-10 Tri-Color System:
+     1. 60% #FFFAF3 - Warm Cream / Floral White (Page Canvas, Surfaces, Base)
+     2. 30% #2F2FE4 - Electric Blue (Primary Brand, Buttons, Navigation, Structure)
+     3. 10% #FFDE42 - Cyber Yellow (High-Impact Accents, Badges, Highlights & Glows)
    ========================================================================== */
 
 /* ==================== 1. DESIGN TOKENS & SYSTEM VARIABLES ==================== */
 :root {
-    /* The 4 Specified Palette Colors */
-    --color-rose: #F6E2E9;       /* rgb(246, 226, 233) */
-    --color-cream: #FEFAF3;      /* rgb(254, 250, 243) */
-    --color-sage: #B8CFB3;       /* rgb(184, 207, 179) */
-    --color-laurel: #84A282;     /* rgb(132, 162, 130) */
+    /* 60-30-10 Tri-Color System:
+       - 60% #FFFAF3: Canvas, Surfaces, Cards, and Body Background
+       - 30% #2F2FE4: Electric Blue Primary Brand, Navigation, Structural CTAs, Headings
+       - 10% #FFDE42: Vibrant Cyber Yellow High-Impact Accents, Badges, Highlights & Glows
+    */
+    --color-cream: #FFFAF3;       /* rgb(255, 250, 243) · 60% Base Canvas */
+    --color-blue: #2F2FE4;        /* rgb(47, 47, 228)   · 30% Primary Brand */
+    --color-blue-dark: #1E1EB8;   /* rgb(30, 30, 184)   · Deep Blue Shade */
+    --color-blue-light: #5252FF;  /* rgb(82, 82, 255)   · Bright Blue Tint */
+    --color-yellow: #FFDE42;      /* rgb(255, 222, 66)  · 10% Vibrant Focus Accent */
+    --color-yellow-dark: #D4B216; /* rgb(212, 178, 22)  · Contrast Deep Yellow */
+    --color-yellow-light: #FFF8D0;/* Soft Yellow Tint */
 
-    /* Dark Organic Canvas */
-    --bg-darker: #0d1410;
-    --bg-dark: #141d17;
-    --bg-card: rgba(23, 34, 28, 0.8);
-    --bg-card-hover: rgba(30, 44, 36, 0.95);
-    --bg-glass: rgba(19, 28, 22, 0.75);
-    --bg-input: rgba(16, 24, 19, 0.9);
+    /* Palette Mapping Aliases */
+    --color-rose: var(--color-yellow);
+    --color-sage: var(--color-blue);
+    --color-laurel: var(--color-blue);
 
-    /* Primary Accent: Laurel Green (#84A282) */
-    --primary: var(--color-laurel);
-    --primary-light: var(--color-sage);
-    --primary-glow: rgba(132, 162, 130, 0.35);
+    /* 60% Warm Cream Canvas & Clean Surface Architecture */
+    --bg-darker: #FFFAF3;
+    --bg-dark: #F7F1E8;
+    --bg-card: rgba(255, 255, 255, 0.92);
+    --bg-card-hover: rgba(255, 255, 255, 0.99);
+    --bg-glass: rgba(255, 250, 243, 0.88);
+    --bg-input: rgba(255, 255, 255, 0.96);
 
-    /* Secondary Accent: Blossom Rose (#F6E2E9) */
-    --secondary: var(--color-rose);
-    --secondary-glow: rgba(246, 226, 233, 0.3);
+    /* 30% Primary Accent: Electric Blue (#2F2FE4) */
+    --primary: var(--color-blue);
+    --primary-light: var(--color-blue-light);
+    --primary-glow: rgba(47, 47, 228, 0.28);
 
-    /* Tertiary Accent: Sage Green (#B8CFB3) */
-    --accent-sage: var(--color-sage);
-    --accent-sage-glow: rgba(184, 207, 179, 0.35);
+    /* 10% Accent: Cyber Yellow (#FFDE42) */
+    --secondary: var(--color-yellow);
+    --secondary-glow: rgba(255, 222, 66, 0.45);
 
-    /* Base Typography Colors */
-    --text-primary: var(--color-cream);
-    --text-secondary: #e8eee6;
-    --text-muted: #b4c7be;
-    --text-dim: #7f968b;
+    /* Tertiary Accent */
+    --accent-sage: var(--color-blue);
+    --accent-sage-glow: rgba(47, 47, 228, 0.22);
 
-    /* Borders & Dividers */
-    --border-subtle: rgba(184, 207, 179, 0.15);
-    --border-light: rgba(246, 226, 233, 0.25);
-    --border-accent: rgba(132, 162, 130, 0.5);
+    /* High-Contrast Crisp Typography on #FFFAF3 Cream Canvas */
+    --text-primary: #121826;
+    --text-secondary: #2B3545;
+    --text-muted: #53627A;
+    --text-dim: #79879C;
+
+    /* Borders & Subtle Contrast */
+    --border-subtle: rgba(47, 47, 228, 0.12);
+    --border-light: rgba(47, 47, 228, 0.22);
+    --border-accent: rgba(47, 47, 228, 0.45);
 
     /* Shadows */
-    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
-    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+    --shadow-sm: 0 2px 8px rgba(47, 47, 228, 0.08);
+    --shadow-md: 0 8px 24px rgba(47, 47, 228, 0.12);
+    --shadow-lg: 0 16px 40px rgba(47, 47, 228, 0.15);
     --shadow-glow: 0 0 30px var(--primary-glow);
 
     /* Spacing System */
@@ -109,13 +119,13 @@ body {
     min-height: 100vh;
 }
 
-::selection {
-    background: var(--color-rose);
-    color: #0d1410;
+:selection {
+    background: var(--color-yellow);
+    color: #121826;
 }
 
 :focus-visible {
-    outline: 2px solid var(--color-rose);
+    outline: 2px solid var(--color-blue);
     outline-offset: 3px;
     border-radius: var(--radius-sm);
 }
@@ -152,9 +162,9 @@ a {
     left: 0;
     height: 3px;
     width: 0%;
-    background: linear-gradient(90deg, var(--color-laurel) 0%, var(--color-sage) 35%, var(--color-rose) 70%, var(--color-cream) 100%);
+    background: linear-gradient(90deg, var(--color-blue) 0%, var(--color-blue-light) 60%, var(--color-yellow) 100%);
     z-index: 99999;
-    box-shadow: 0 0 14px var(--color-rose);
+    box-shadow: 0 0 14px var(--color-yellow);
     transition: width 0.05s linear;
 }
 
@@ -173,8 +183,8 @@ a {
     position: absolute;
     inset: 0;
     background-image: 
-        linear-gradient(to right, rgba(184, 207, 179, 0.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(184, 207, 179, 0.04) 1px, transparent 1px);
+        linear-gradient(to right, rgba(47, 47, 228, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(47, 47, 228, 0.05) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%);
     -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 80%);
@@ -193,7 +203,7 @@ a {
     height: 550px;
     top: -120px;
     left: -120px;
-    background: radial-gradient(circle, rgba(132, 162, 130, 0.35) 0%, rgba(132, 162, 130, 0.12) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(47, 47, 228, 0.20) 0%, rgba(47, 47, 228, 0.06) 45%, transparent 70%);
 }
 
 .ambient-glow-2 {
@@ -201,7 +211,7 @@ a {
     height: 620px;
     top: 35%;
     right: -150px;
-    background: radial-gradient(circle, rgba(246, 226, 233, 0.22) 0%, rgba(246, 226, 233, 0.08) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 222, 66, 0.25) 0%, rgba(255, 222, 66, 0.08) 45%, transparent 70%);
 }
 
 .ambient-glow-3 {
@@ -209,7 +219,7 @@ a {
     height: 480px;
     bottom: -100px;
     left: 20%;
-    background: radial-gradient(circle, rgba(184, 207, 179, 0.25) 0%, rgba(184, 207, 179, 0.08) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(47, 47, 228, 0.15) 0%, rgba(47, 47, 228, 0.05) 45%, transparent 70%);
 }
 
 /* ==================== 5. PAGE LOADER (ALL 4 COLORS) ==================== */
@@ -242,13 +252,13 @@ a {
 .spinner {
     width: 50px;
     height: 50px;
-    border: 3px solid rgba(184, 207, 179, 0.15);
-    border-top-color: var(--color-rose);
-    border-right-color: var(--color-sage);
-    border-bottom-color: var(--color-laurel);
+    border: 3px solid rgba(47, 47, 228, 0.15);
+    border-top-color: var(--color-yellow);
+    border-right-color: var(--color-blue);
+    border-bottom-color: var(--color-blue-dark);
     border-radius: 50%;
     animation: spin 0.85s linear infinite;
-    box-shadow: 0 0 24px var(--color-rose);
+    box-shadow: 0 0 24px rgba(255, 222, 66, 0.6);
 }
 
 .loader-text {
@@ -256,7 +266,7 @@ a {
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-cream);
+    color: var(--text-primary);
 }
 
 @keyframes spin {
@@ -277,7 +287,7 @@ a {
 }
 
 .navbar.scrolled {
-    background: rgba(13, 20, 16, 0.96);
+    background: rgba(255, 250, 243, 0.96);
     border-bottom: 1px solid var(--border-subtle);
     padding: var(--space-sm) 0;
     box-shadow: var(--shadow-sm);
@@ -300,7 +310,7 @@ a {
     font-weight: 700;
     font-size: 1.25rem;
     letter-spacing: -0.02em;
-    color: var(--color-cream);
+    color: var(--text-primary);
     transition: color var(--duration-fast);
 }
 
@@ -314,23 +324,23 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(132, 162, 130, 0.3), rgba(246, 226, 233, 0.25));
+    background: linear-gradient(135deg, rgba(47, 47, 228, 0.3), rgba(255, 222, 66, 0.25));
     border: 1px solid var(--color-rose);
     border-radius: 10px;
-    color: var(--color-cream);
+    color: var(--text-primary);
     font-size: 0.95rem;
-    box-shadow: 0 0 15px rgba(246, 226, 233, 0.25);
+    box-shadow: 0 0 15px rgba(255, 222, 66, 0.25);
     transition: transform var(--duration-normal) var(--ease-out), border-color var(--duration-normal);
 }
 
 .nav-logo a:hover .logo-badge {
     transform: rotate(6deg) scale(1.05);
-    border-color: var(--color-cream);
+    border-color: var(--text-primary);
 }
 
 .logo-text {
     font-weight: 700;
-    background: linear-gradient(135deg, var(--color-cream) 20%, var(--color-rose) 80%);
+    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-dark) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -340,7 +350,7 @@ a {
     list-style: none;
     align-items: center;
     gap: var(--space-xs);
-    background: rgba(184, 207, 179, 0.06);
+    background: rgba(47, 47, 228, 0.06);
     padding: 4px;
     border-radius: var(--radius-full);
     border: 1px solid var(--border-subtle);
@@ -358,22 +368,22 @@ a {
 }
 
 .nav-link:hover {
-    color: var(--color-cream);
-    background: rgba(246, 226, 233, 0.12);
+    color: var(--text-primary);
+    background: rgba(255, 222, 66, 0.12);
 }
 
 .nav-link.active {
-    color: #0d1410;
+    color: #121826;
     background: var(--color-rose);
     border: 1px solid var(--color-cream);
     font-weight: 600;
-    box-shadow: 0 0 18px rgba(246, 226, 233, 0.4);
+    box-shadow: 0 0 18px rgba(255, 222, 66, 0.4);
 }
 
 /* Hamburger Menu Button */
 .hamburger {
     display: none;
-    background: rgba(184, 207, 179, 0.08);
+    background: rgba(47, 47, 228, 0.08);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     padding: 10px;
@@ -387,7 +397,7 @@ a {
 }
 
 .hamburger:hover {
-    background: rgba(246, 226, 233, 0.15);
+    background: rgba(255, 222, 66, 0.15);
     border-color: var(--color-rose);
 }
 
@@ -395,7 +405,7 @@ a {
     display: block;
     width: 20px;
     height: 2px;
-    background-color: var(--color-cream);
+    background-color: var(--text-primary);
     border-radius: 2px;
     transition: transform var(--duration-normal) var(--ease-out), opacity var(--duration-fast);
 }
@@ -412,23 +422,25 @@ a {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ==================== 7. BUTTONS (LAUREL & ROSE PAIRINGS) ==================== */
+/* ==================== 7. BUTTONS (60-30-10 PALETTE SYSTEM) ==================== */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: var(--space-xs);
-    padding: 12px 26px;
+    padding: 13px 28px;
     border-radius: var(--radius-md);
     font-family: var(--font-sans);
     font-size: 0.95rem;
     font-weight: 600;
+    letter-spacing: 0.015em;
     cursor: pointer;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     transition: transform var(--duration-normal) var(--ease-out),
                 box-shadow var(--duration-normal) var(--ease-out),
                 background var(--duration-normal) var(--ease-out),
-                border-color var(--duration-normal) var(--ease-out);
+                border-color var(--duration-normal) var(--ease-out),
+                color var(--duration-normal) var(--ease-out);
     position: relative;
     overflow: hidden;
     text-decoration: none;
@@ -436,42 +448,54 @@ a {
 }
 
 .btn i {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     transition: transform var(--duration-fast) var(--ease-out);
 }
 
 .btn:hover i {
-    transform: translateX(3px);
+    transform: translateX(4px);
 }
 
-/* Primary Button: Deep Laurel with Sage & Cream accents */
+/* Primary Button: 30% Electric Blue (#2F2FE4) Foundation with Crisp White Text */
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-laurel) 0%, #6d8b6c 100%);
-    color: var(--color-cream);
-    box-shadow: 0 4px 18px rgba(132, 162, 130, 0.35);
-    border-color: var(--color-sage);
+    background: linear-gradient(135deg, #2F2FE4 0%, #1E1EB8 100%);
+    color: #FFFFFF !important;
+    border-color: #2F2FE4;
+    box-shadow: 0 4px 18px rgba(47, 47, 228, 0.38), 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(132, 162, 130, 0.55);
-    background: linear-gradient(135deg, #9bb899 0%, var(--color-laurel) 100%);
-    border-color: var(--color-cream);
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #4444FF 0%, #2525D9 100%);
+    border-color: #4444FF;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 28px rgba(47, 47, 228, 0.48), 0 3px 10px rgba(47, 47, 228, 0.25);
 }
 
-/* Secondary Button: Soft Rose Glass with Rose Text */
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(47, 47, 228, 0.35);
+}
+
+/* Secondary Button: Clean Crisp Surface with 30% Blue Accent & 10% Yellow Hover State */
 .btn-secondary {
-    background: rgba(246, 226, 233, 0.12);
-    color: var(--color-rose);
-    border: 1px solid rgba(246, 226, 233, 0.35);
+    background: #FFFFFF;
+    color: #2F2FE4 !important;
+    border-color: rgba(47, 47, 228, 0.32);
+    box-shadow: 0 2px 10px rgba(47, 47, 228, 0.08);
 }
 
 .btn-secondary:hover {
-    background: var(--color-rose);
-    color: #0d1410;
-    border-color: var(--color-cream);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(246, 226, 233, 0.4);
+    background: #FFDE42;
+    color: #121826 !important;
+    border-color: #D4B216;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 222, 66, 0.45), 0 2px 8px rgba(212, 178, 22, 0.25);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(255, 222, 66, 0.35);
 }
 
 /* ==================== 8. SECTION COMMON STYLES ==================== */
@@ -487,22 +511,22 @@ section {
     margin: 0 auto clamp(2.5rem, 5vw, 4rem);
 }
 
-/* Tag Pills: Soft Rose badge with Rose Border */
+/* Tag Pills: 10% Yellow Accent Badge */
 .section-tag {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     padding: 6px 16px;
     border-radius: var(--radius-full);
-    background: rgba(246, 226, 233, 0.15);
-    border: 1px solid var(--color-rose);
-    color: var(--color-rose);
+    background: rgba(255, 222, 66, 0.22);
+    border: 1px solid rgba(212, 178, 22, 0.5);
+    color: #121826;
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: var(--space-sm);
-    box-shadow: 0 0 16px rgba(246, 226, 233, 0.2);
+    box-shadow: 0 0 16px rgba(255, 222, 66, 0.2);
 }
 
 .section-title {
@@ -511,7 +535,7 @@ section {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.025em;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: var(--space-xs);
 }
 
@@ -523,7 +547,7 @@ section {
 
 /* Gradient Text using all 4 Colors */
 .gradient-text {
-    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-sage) 40%, var(--color-rose) 80%, var(--color-cream) 100%);
+    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-light) 45%, var(--color-yellow) 90%, var(--color-blue) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -589,7 +613,7 @@ section {
     font-weight: 800;
     line-height: 1.12;
     letter-spacing: -0.03em;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: var(--space-xs);
     animation: heroFadeInUp 0.65s var(--ease-out) 0.2s backwards;
 }
@@ -599,7 +623,7 @@ section {
     font-family: var(--font-sans);
     font-size: clamp(1.2rem, 2.6vw, 1.75rem);
     font-weight: 500;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: var(--space-md);
     min-height: 2.2em;
     display: flex;
@@ -684,11 +708,11 @@ section {
     gap: 6px;
     padding: 4px 10px;
     border-radius: var(--radius-sm);
-    background: rgba(184, 207, 179, 0.08);
+    background: rgba(47, 47, 228, 0.08);
     border: 1px solid var(--border-subtle);
     font-size: 0.78rem;
     font-weight: 500;
-    color: var(--color-cream);
+    color: var(--text-primary);
     transition: transform var(--duration-fast), border-color var(--duration-fast);
 }
 
@@ -715,9 +739,9 @@ section {
     width: 100%;
     max-width: 480px;
     background: var(--bg-card);
-    border: 1px solid rgba(246, 226, 233, 0.25);
+    border: 1px solid rgba(255, 222, 66, 0.25);
     border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-lg), 0 0 35px rgba(132, 162, 130, 0.18);
+    box-shadow: var(--shadow-lg), 0 0 35px rgba(47, 47, 228, 0.18);
     overflow: hidden;
     transition: transform var(--duration-normal) var(--ease-out), border-color var(--duration-normal), box-shadow var(--duration-normal);
 }
@@ -725,7 +749,7 @@ section {
 .dev-card:hover {
     transform: translateY(-6px);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-lg), 0 0 45px rgba(246, 226, 233, 0.25);
+    box-shadow: var(--shadow-lg), 0 0 45px rgba(255, 222, 66, 0.25);
 }
 
 .dev-card-header {
@@ -733,7 +757,7 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 12px 18px;
-    background: rgba(13, 20, 16, 0.75);
+    background: rgba(255, 250, 243, 0.75);
     border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -758,8 +782,8 @@ section {
     gap: 6px;
     font-family: var(--font-mono);
     font-size: 0.8rem;
-    color: var(--color-cream);
-    background: rgba(184, 207, 179, 0.1);
+    color: var(--text-primary);
+    background: rgba(47, 47, 228, 0.1);
     padding: 4px 12px;
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-subtle);
@@ -789,7 +813,7 @@ section {
 
 .dev-card-body {
     padding: 20px 22px;
-    background: rgba(16, 24, 19, 0.9);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .code-block {
@@ -797,22 +821,22 @@ section {
     font-family: var(--font-mono);
     font-size: clamp(0.78rem, 1.2vw, 0.88rem);
     line-height: 1.68;
-    color: var(--color-cream);
+    color: var(--text-primary);
     overflow-x: auto;
 }
 
-.code-keyword { color: var(--color-rose); font-weight: 600; }
-.code-def { color: var(--color-sage); }
-.code-type { color: #f59e0b; }
-.code-prop { color: var(--color-cream); font-weight: 500; }
-.code-string { color: var(--color-sage); }
+.code-keyword { color: var(--color-blue); font-weight: 700; }
+.code-def { color: var(--color-blue-dark); font-weight: 600; }
+.code-type { color: #b45309; }
+.code-prop { color: var(--text-secondary); font-weight: 500; }
+.code-string { color: #047857; }
 
 .dev-card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 18px;
-    background: rgba(13, 20, 16, 0.75);
+    background: rgba(255, 250, 243, 0.75);
     border-top: 1px solid var(--border-subtle);
     font-family: var(--font-mono);
     font-size: 0.74rem;
@@ -838,13 +862,13 @@ section {
     gap: 8px;
     padding: 8px 16px;
     border-radius: var(--radius-full);
-    background: rgba(19, 28, 22, 0.95);
+    background: rgba(255, 250, 243, 0.95);
     border: 1px solid var(--color-rose);
-    color: var(--color-cream);
+    color: var(--text-primary);
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: 600;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(246, 226, 233, 0.25);
+    box-shadow: 0 8px 24px rgba(47, 47, 228, 0.15), 0 0 16px rgba(255, 222, 66, 0.35);
     backdrop-filter: blur(8px);
     transition: transform var(--duration-normal) var(--ease-out);
     z-index: 3;
@@ -973,7 +997,7 @@ section {
 .shape-1 {
     width: 320px;
     height: 320px;
-    background: radial-gradient(circle, rgba(132, 162, 130, 0.4) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(47, 47, 228, 0.4) 0%, transparent 70%);
     top: 15%;
     left: 10%;
 }
@@ -981,14 +1005,14 @@ section {
 .shape-2 {
     width: 360px;
     height: 360px;
-    background: radial-gradient(circle, rgba(246, 226, 233, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 222, 66, 0.3) 0%, transparent 70%);
     bottom: 15%;
     right: 8%;
 }
 
 /* ==================== 10. ABOUT SECTION ==================== */
 .about {
-    background: rgba(19, 28, 22, 0.5);
+    background: rgba(255, 250, 243, 0.5);
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
 }
@@ -1014,14 +1038,14 @@ section {
     overflow: hidden;
     background: var(--bg-card);
     border: 2px solid var(--color-sage);
-    box-shadow: var(--shadow-lg), 0 0 32px rgba(184, 207, 179, 0.25);
+    box-shadow: var(--shadow-lg), 0 0 32px rgba(47, 47, 228, 0.25);
     transition: transform var(--duration-slow) var(--ease-out), box-shadow var(--duration-slow), border-color var(--duration-slow);
 }
 
 .image-wrapper:hover {
     transform: translateY(-6px);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-lg), 0 0 45px rgba(246, 226, 233, 0.4);
+    box-shadow: var(--shadow-lg), 0 0 45px rgba(255, 222, 66, 0.4);
 }
 
 .image-wrapper video {
@@ -1071,7 +1095,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top, rgba(246, 226, 233, 0.2), transparent 70%);
+    background: radial-gradient(circle at top, rgba(255, 222, 66, 0.2), transparent 70%);
     opacity: 0;
     transition: opacity var(--duration-normal);
 }
@@ -1080,7 +1104,7 @@ section {
     transform: translateY(-4px);
     background: var(--bg-card-hover);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-md), 0 0 20px rgba(246, 226, 233, 0.25);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(255, 222, 66, 0.25);
 }
 
 .highlight-item:hover::before {
@@ -1091,7 +1115,7 @@ section {
     font-family: var(--font-heading);
     font-size: clamp(1.8rem, 3vw, 2.3rem);
     font-weight: 700;
-    color: var(--color-rose);
+    color: var(--color-blue);
     margin-bottom: 4px;
     position: relative;
     z-index: 1;
@@ -1100,7 +1124,7 @@ section {
 .highlight-item p {
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--color-cream);
+    color: var(--text-primary);
     line-height: 1.4;
     position: relative;
     z-index: 1;
@@ -1127,8 +1151,8 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    background: rgba(184, 207, 179, 0.08);
-    color: var(--color-cream);
+    background: rgba(47, 47, 228, 0.08);
+    color: var(--text-primary);
     border: 1px solid var(--border-subtle);
     font-size: 1.1rem;
     transition: all var(--duration-fast) var(--ease-out);
@@ -1136,11 +1160,11 @@ section {
 }
 
 .social-link:hover {
-    color: #0d1410;
-    background: var(--color-rose);
-    border-color: var(--color-cream);
+    color: #FFFFFF;
+    background: #2F2FE4;
+    border-color: #2F2FE4;
     transform: translateY(-3px);
-    box-shadow: 0 4px 16px rgba(246, 226, 233, 0.4);
+    box-shadow: 0 6px 18px rgba(47, 47, 228, 0.38);
 }
 
 /* ==================== 11. SKILLS SECTION ==================== */
@@ -1170,7 +1194,7 @@ section {
     font-family: var(--font-heading);
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--color-cream);
+    color: var(--text-primary);
     display: flex;
     align-items: center;
     gap: var(--space-sm);
@@ -1191,7 +1215,7 @@ section {
 }
 
 .skill-item {
-    background: rgba(16, 24, 19, 0.65);
+    background: rgba(255, 255, 255, 0.65);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
     padding: var(--space-md);
@@ -1228,21 +1252,25 @@ section {
 .skill-name {
     font-weight: 600;
     font-size: 0.95rem;
-    color: var(--color-cream);
+    color: var(--text-primary);
 }
 
-/* Percentage Badge in Soft Blossom Rose (#F6E2E9) */
+/* Percentage Badge in Cyber Yellow (#FFDE42) */
 .skill-percent {
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--color-rose);
+    font-weight: 700;
+    color: var(--color-blue);
+    background: rgba(255, 222, 66, 0.3);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(212, 178, 22, 0.4);
 }
 
 .skill-bar {
     width: 100%;
     height: 7px;
-    background: rgba(184, 207, 179, 0.12);
+    background: rgba(47, 47, 228, 0.12);
     border-radius: var(--radius-full);
     overflow: hidden;
 }
@@ -1250,16 +1278,16 @@ section {
 /* Progress gradient: Laurel -> Sage -> Rose */
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--color-laurel) 0%, var(--color-sage) 50%, var(--color-rose) 100%);
+    background: linear-gradient(90deg, var(--color-blue) 0%, var(--color-blue-light) 65%, var(--color-yellow) 100%);
     border-radius: var(--radius-full);
     width: 0%;
-    box-shadow: 0 0 10px rgba(246, 226, 233, 0.35);
+    box-shadow: 0 0 10px rgba(255, 222, 66, 0.35);
     transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* ==================== 12. EDUCATION & TIMELINE ==================== */
 .education {
-    background: rgba(19, 28, 22, 0.5);
+    background: rgba(255, 250, 243, 0.5);
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
 }
@@ -1280,7 +1308,7 @@ section {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-laurel), var(--color-sage), var(--color-rose), transparent);
+    background: linear-gradient(180deg, var(--color-blue), var(--color-blue-light), var(--color-yellow), transparent);
     border-radius: 2px;
 }
 
@@ -1303,7 +1331,7 @@ section {
 .timeline-item:hover .timeline-marker {
     transform: translate(-50%, -50%) scale(1.3);
     background: var(--color-rose);
-    border-color: var(--color-cream);
+    border-color: var(--text-primary);
 }
 
 .timeline-content {
@@ -1331,32 +1359,32 @@ section {
     transform: translateY(-4px);
     background: var(--bg-card-hover);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-md), 0 0 20px rgba(246, 226, 233, 0.2);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(255, 222, 66, 0.2);
 }
 
-/* Date Pill Badge in Soft Blossom Rose (#F6E2E9) */
+/* Date Pill Badge in Cyber Yellow (#FFDE42) */
 .timeline-date-badge {
     display: inline-block;
     padding: 4px 14px;
     border-radius: var(--radius-full);
-    background: rgba(246, 226, 233, 0.18);
-    border: 1px solid var(--color-rose);
-    color: var(--color-rose);
+    background: rgba(255, 222, 66, 0.28);
+    border: 1px solid rgba(212, 178, 22, 0.6);
+    color: #121826;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: var(--space-xs);
-    box-shadow: 0 0 10px rgba(246, 226, 233, 0.25);
+    box-shadow: 0 0 10px rgba(255, 222, 66, 0.35);
 }
 
 .timeline-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: 4px;
 }
 
-/* Subtitle in Sage Green (#B8CFB3) */
+/* Subtitle in Electric Blue (#2F2FE4) */
 .timeline-subtitle {
     color: var(--color-sage);
     font-weight: 600;
@@ -1396,30 +1424,33 @@ section {
     flex-wrap: wrap;
 }
 
-/* Filter buttons with Sage & Rose highlights */
+/* Filter buttons with 30% Electric Blue & 10% Yellow Active Pill */
 .filter-btn {
-    padding: 8px 22px;
-    background: rgba(184, 207, 179, 0.08);
-    border: 1px solid var(--border-subtle);
-    color: var(--color-cream);
+    padding: 9px 24px;
+    background: #FFFFFF;
+    border: 1.5px solid rgba(47, 47, 228, 0.18);
+    color: var(--text-secondary);
     border-radius: var(--radius-full);
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 2px 6px rgba(47, 47, 228, 0.06);
     transition: all var(--duration-fast) var(--ease-out);
 }
 
 .filter-btn:hover {
-    color: var(--color-rose);
-    background: rgba(246, 226, 233, 0.12);
-    border-color: var(--color-rose);
+    color: #2F2FE4;
+    background: rgba(47, 47, 228, 0.06);
+    border-color: rgba(47, 47, 228, 0.4);
+    transform: translateY(-2px);
 }
 
 .filter-btn.active {
-    color: #0d1410;
-    background: var(--color-rose);
-    border-color: var(--color-cream);
-    box-shadow: 0 4px 18px rgba(246, 226, 233, 0.45);
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #2F2FE4 0%, #1E1EB8 100%);
+    border-color: #2F2FE4;
+    box-shadow: 0 4px 18px rgba(47, 47, 228, 0.38);
+    transform: translateY(-2px);
 }
 
 .projects-grid {
@@ -1443,7 +1474,7 @@ section {
 .project-card:hover {
     transform: translateY(-8px);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-lg), 0 0 30px rgba(246, 226, 233, 0.25);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 222, 66, 0.25);
 }
 
 .project-image {
@@ -1451,7 +1482,7 @@ section {
     width: 100%;
     height: 220px;
     overflow: hidden;
-    background: #111a14;
+    background: #F0E8DC;
 }
 
 .project-image img {
@@ -1468,7 +1499,7 @@ section {
 .project-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(13, 20, 16, 0.92);
+    background: rgba(255, 250, 243, 0.92);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1488,20 +1519,20 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: var(--color-laurel);
-    color: var(--color-cream);
+    background: #2F2FE4;
+    color: #FFFFFF;
     font-size: 1.1rem;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--color-sage);
-    transition: transform var(--duration-fast), background var(--duration-fast), color var(--duration-fast);
+    box-shadow: 0 4px 14px rgba(47, 47, 228, 0.4);
+    border: 1.5px solid #5252FF;
+    transition: transform var(--duration-fast), background var(--duration-fast), color var(--duration-fast), box-shadow var(--duration-fast);
 }
 
 .project-link:hover {
-    background: var(--color-rose);
-    color: #0d1410;
-    border-color: var(--color-cream);
-    transform: scale(1.12);
-    box-shadow: 0 0 18px var(--color-rose);
+    background: #FFDE42;
+    color: #121826;
+    border-color: #D4B216;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 222, 66, 0.6);
 }
 
 .project-content {
@@ -1515,7 +1546,7 @@ section {
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: var(--space-xs);
 }
 
@@ -1540,20 +1571,20 @@ section {
     font-weight: 600;
     padding: 4px 12px;
     border-radius: var(--radius-sm);
-    background: rgba(184, 207, 179, 0.12);
-    border: 1px solid rgba(184, 207, 179, 0.35);
+    background: rgba(47, 47, 228, 0.12);
+    border: 1px solid rgba(47, 47, 228, 0.35);
     color: var(--color-sage);
 }
 
 .project-card:nth-child(even) .tech-tag {
-    background: rgba(246, 226, 233, 0.12);
-    border-color: rgba(246, 226, 233, 0.35);
+    background: rgba(255, 222, 66, 0.12);
+    border-color: rgba(255, 222, 66, 0.35);
     color: var(--color-rose);
 }
 
 /* ==================== 14. WORK EXPERIENCE SECTION ==================== */
 .experience {
-    background: rgba(19, 28, 22, 0.5);
+    background: rgba(255, 250, 243, 0.5);
     border-top: 1px solid var(--border-subtle);
     border-bottom: 1px solid var(--border-subtle);
 }
@@ -1572,7 +1603,7 @@ section {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(180deg, var(--color-laurel), var(--color-sage), var(--color-rose), transparent);
+    background: linear-gradient(180deg, var(--color-blue), var(--color-blue-light), var(--color-yellow), transparent);
 }
 
 .experience-item {
@@ -1591,7 +1622,7 @@ section {
     background: var(--bg-darker);
     border: 3px solid var(--color-rose);
     border-radius: 50%;
-    box-shadow: 0 0 14px var(--color-rose);
+    box-shadow: 0 0 14px var(--color-yellow);
     z-index: 2;
     transition: transform var(--duration-fast);
 }
@@ -1614,32 +1645,32 @@ section {
     transform: translateY(-4px);
     background: var(--bg-card-hover);
     border-color: var(--color-rose);
-    box-shadow: var(--shadow-md), 0 0 20px rgba(246, 226, 233, 0.25);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(255, 222, 66, 0.25);
 }
 
-/* Period Badge in Soft Blossom Rose (#F6E2E9) */
+/* Period Badge in Cyber Yellow (#FFDE42) */
 .experience-period-badge {
     display: inline-block;
     padding: 4px 14px;
     border-radius: var(--radius-full);
-    background: rgba(246, 226, 233, 0.16);
-    border: 1px solid var(--color-rose);
-    color: var(--color-rose);
+    background: rgba(255, 222, 66, 0.28);
+    border: 1px solid rgba(212, 178, 22, 0.6);
+    color: #121826;
     font-size: 0.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: var(--space-xs);
-    box-shadow: 0 0 10px rgba(246, 226, 233, 0.2);
+    box-shadow: 0 0 10px rgba(255, 222, 66, 0.35);
 }
 
 .experience-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 700;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: 4px;
 }
 
-/* Company Name in Sage Green (#B8CFB3) */
+/* Company Name in Electric Blue (#2F2FE4) */
 .experience-company {
     color: var(--color-sage);
     font-weight: 600;
@@ -1703,7 +1734,7 @@ section {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-cream);
+    color: var(--text-primary);
     margin-bottom: var(--space-xs);
 }
 
@@ -1732,7 +1763,7 @@ section {
     width: 44px;
     height: 44px;
     border-radius: var(--radius-md);
-    background: rgba(246, 226, 233, 0.14);
+    background: rgba(255, 222, 66, 0.14);
     border: 1px solid var(--color-rose);
     color: var(--color-rose);
     display: flex;
@@ -1740,7 +1771,7 @@ section {
     justify-content: center;
     font-size: 1.1rem;
     flex-shrink: 0;
-    box-shadow: 0 0 14px rgba(246, 226, 233, 0.2);
+    box-shadow: 0 0 14px rgba(255, 222, 66, 0.2);
 }
 
 .contact-method h4 {
@@ -1753,7 +1784,7 @@ section {
 }
 
 .contact-method p, .contact-method a {
-    color: var(--color-cream);
+    color: var(--text-primary);
     font-size: 0.95rem;
     font-weight: 500;
     line-height: 1.4;
@@ -1784,20 +1815,20 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    background: rgba(184, 207, 179, 0.08);
+    background: rgba(47, 47, 228, 0.08);
     border: 1px solid var(--border-subtle);
-    color: var(--color-cream);
+    color: var(--text-primary);
     font-size: 1.1rem;
     transition: all var(--duration-fast) var(--ease-out);
     cursor: pointer;
 }
 
 .social-icon:hover {
-    color: #0d1410;
-    background: var(--color-rose);
-    border-color: var(--color-cream);
+    color: #FFFFFF;
+    background: #2F2FE4;
+    border-color: #2F2FE4;
     transform: translateY(-3px);
-    box-shadow: 0 4px 16px rgba(246, 226, 233, 0.45);
+    box-shadow: 0 6px 18px rgba(47, 47, 228, 0.38);
 }
 
 /* Contact Form Card */
@@ -1823,7 +1854,7 @@ section {
 .form-group label {
     font-size: 0.88rem;
     font-weight: 600;
-    color: var(--color-cream);
+    color: var(--text-primary);
 }
 
 .form-group input,
@@ -1832,7 +1863,7 @@ section {
     background: var(--bg-input);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
-    color: var(--color-cream);
+    color: var(--text-primary);
     font-family: var(--font-sans);
     font-size: 0.95rem;
     transition: all var(--duration-fast) var(--ease-out);
@@ -1847,23 +1878,25 @@ section {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-rose);
-    background: rgba(246, 226, 233, 0.08);
-    box-shadow: 0 0 0 3px rgba(246, 226, 233, 0.25);
+    background: rgba(255, 222, 66, 0.08);
+    box-shadow: 0 0 0 3px rgba(255, 222, 66, 0.25);
 }
 
-/* Form Submit Button (Vibrant Laurel + Sage + Rose highlight) */
+/* Form Submit Button: 30% Electric Blue with Glow on hover */
 #submitBtn {
-    background: linear-gradient(135deg, var(--color-laurel) 0%, var(--color-sage) 100%);
-    color: #0d1410;
+    background: linear-gradient(135deg, #2F2FE4 0%, #1E1EB8 100%);
+    color: #FFFFFF;
     font-weight: 700;
-    border: 1px solid var(--color-cream);
-    box-shadow: 0 4px 20px rgba(184, 207, 179, 0.35);
+    border: 1.5px solid #2F2FE4;
+    box-shadow: 0 4px 20px rgba(47, 47, 228, 0.35);
+    width: 100%;
 }
 
 #submitBtn:hover {
-    background: linear-gradient(135deg, var(--color-rose) 0%, var(--color-sage) 100%);
-    color: #0d1410;
-    box-shadow: 0 6px 26px rgba(246, 226, 233, 0.5);
+    background: linear-gradient(135deg, #4444FF 0%, #2525D9 100%);
+    color: #FFFFFF;
+    border-color: #4444FF;
+    box-shadow: 0 8px 30px rgba(47, 47, 228, 0.5);
     transform: translateY(-2px);
 }
 
@@ -1876,8 +1909,8 @@ section {
 
 .form-status.success {
     padding: var(--space-sm) var(--space-md);
-    background: rgba(184, 207, 179, 0.2);
-    color: var(--color-cream);
+    background: rgba(47, 47, 228, 0.2);
+    color: var(--text-primary);
     border: 1px solid var(--color-sage);
 }
 
@@ -1892,7 +1925,7 @@ section {
 .footer {
     border-top: 1px solid var(--border-subtle);
     padding: var(--space-2xl) 0 var(--space-xl);
-    background: rgba(13, 20, 16, 0.85);
+    background: rgba(255, 250, 243, 0.85);
     text-align: center;
 }
 
@@ -1907,7 +1940,7 @@ section {
     font-family: var(--font-heading);
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--color-cream);
+    color: var(--text-primary);
 }
 
 .footer-content h3 i {
@@ -1928,15 +1961,15 @@ section {
     width: 46px;
     height: 46px;
     border-radius: var(--radius-md);
-    background: var(--bg-card);
-    border: 1px solid var(--color-rose);
-    color: var(--color-rose);
+    background: #FFFFFF;
+    border: 1.5px solid rgba(47, 47, 228, 0.35);
+    color: #2F2FE4;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.05rem;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 16px rgba(47, 47, 228, 0.18);
     z-index: 900;
     opacity: 0;
     visibility: hidden;
@@ -1946,7 +1979,8 @@ section {
                 visibility var(--duration-normal),
                 background var(--duration-fast),
                 border-color var(--duration-fast),
-                color var(--duration-fast);
+                color var(--duration-fast),
+                box-shadow var(--duration-fast);
 }
 
 .back-to-top.show {
@@ -1956,11 +1990,11 @@ section {
 }
 
 .back-to-top:hover {
-    background: var(--color-rose);
-    border-color: var(--color-cream);
-    color: #0d1410;
-    box-shadow: 0 8px 24px rgba(246, 226, 233, 0.45);
-    transform: translateY(-4px) scale(1.05);
+    background: #FFDE42;
+    border-color: #D4B216;
+    color: #121826;
+    box-shadow: 0 8px 24px rgba(255, 222, 66, 0.5);
+    transform: translateY(-4px) scale(1.08);
 }
 
 /* ==================== 18. SCROLL REVEAL STYLES ==================== */
@@ -2064,7 +2098,7 @@ section {
         top: 72px;
         left: 1rem;
         right: 1rem;
-        background: rgba(13, 20, 16, 0.97);
+        background: rgba(255, 250, 243, 0.97);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--border-light);
