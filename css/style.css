@@ -1791,6 +1791,12 @@ section {
     transition: color var(--duration-fast);
 }
 
+.contact-method .contact-subtext {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 2px;
+}
+
 .contact-method a:hover {
     color: var(--color-rose);
 }
