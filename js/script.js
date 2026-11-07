@@ -520,7 +520,7 @@ function openinstagram() {
 }
 
 function openEmail() {
-    window.open("mailto:nisanthkalden2003@gmail.com", "_blank");
+    window.open("mailto:nisanthkalden2003@gmail.com", "_blank");  
 }
 
 // ==================== 12. WHATSAPP & CONTACT FORM ====================
